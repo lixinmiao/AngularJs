@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="control">
+
+    <ul>
+        <li ng-repeat="x in names |orderBy:'country'">
+            {{(x.name|uppercase)+","+x.country}}
+        </li>
+    </ul>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('control', function($scope) {
+        $scope.names=[{name:'lixinmiao',country:'china'},{name:'hefei',country:'japan'}];
+    });
+</script>
+<!--currency	格式化数字为货币格式。
+filter	从数组项中选择一个子集。
+lowercase	格式化字符串为小写。
+orderBy	根据某个表达式排列数组。
+uppercase	格式化字符串为大写。-->
+</body>
+</html>

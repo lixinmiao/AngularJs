@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<runoob-directive></runoob-directive>
+<div runoob-directive></div>
+<div class="runoob-directive"></div>
+<!-- directive: runoob-directive -->
+
+<script>
+    var app = angular.module("myApp", []);
+    app.directive("runoobDirective", function() {
+        return {
+            restrict:"EACM",
+            replace : true,
+            template : "<h1>自定义指令!</h1>"
+        };
+    });
+</script>
+</body>
+
+<!--E 作为元素名使用
+A 作为属性使用
+C 作为类名使用
+M 作为注释使用-->
+</html>

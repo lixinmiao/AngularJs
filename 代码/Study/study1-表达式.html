@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<div ng-app="" ng-init="a=1;b=2;person={name:'lixinmiao'};points=[1,2,3]">
+    <!--表达式{{}}-->
+    <p>我的第一个表达式: {{ 5 + 5 }}</p>
+    <p>我的第二个表达式: {{ a*b }}</p>
+    <p>我的第三个表达式:{{person.name}}</p>
+    <p>我的第四个表达式:{{points[2]}}</p>
+    <span ng-bind="a + ' ' + b"/>
+
+
+</div>
+
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</body>
+</html>
