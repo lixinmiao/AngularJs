@@ -13,7 +13,7 @@
             {{(x.name|uppercase)+","+x.country}}
         </li>
     </ul>
-
+{{theTime}}
 </div>
 
 <script>
@@ -21,6 +21,12 @@
     app.controller('control', function($scope) {
         $scope.names=[{name:'lixinmiao',country:'china'},{name:'hefei',country:'japan'}];
     });
+	app.controller('control', function($scope, $interval) { 
+ $scope.theTime = new Date().toLocaleTimeString(); 
+ $interval(function () { 
+  $scope.theTime = new Date().toLocaleTimeString(); 
+ }, 1000); 
+}); 
 </script>
 <!--currency	格式化数字为货币格式。
 filter	从数组项中选择一个子集。
